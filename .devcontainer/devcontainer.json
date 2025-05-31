@@ -1,0 +1,31 @@
+{
+  "name": "Android Signage DevContainer",
+  "image": "ubuntu:22.04",
+  "features": {},
+  "forwardPorts": [8000, 8080],
+  "postCreateCommand": "/workspaces/${{containerWorkspaceFolderBasename}}/.devcontainer/setup-android.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "ms-androidtools.vscode-android-emulator",
+        "vscjava.vscode-gradle",
+        "redhat.vscode-xml",
+        "github.codespaces",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "containerEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk-amd64",
+    "ANDROID_HOME": "/home/codespace/android-sdk",
+    "ANDROID_SDK_ROOT": "/home/codespace/android-sdk",
+    "GRADLE_USER_HOME": "/home/codespace/.gradle"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/.gradle,target=/home/codespace/.gradle,type=bind,consistency=cached"
+  ],
+  "runArgs": [
+    "--memory=8g"
+  ]
+}
