@@ -1,0 +1,188 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+## Project Context
+You are developing an Android WebView application specifically for digital signage and CMS (Content Management System) integration. This app will run on dedicated Android tablets or signage devices in kiosk mode, displaying web-based content from a remote CMS.
+
+## Core Requirements and Constraints
+
+### Android Development Standards
+- Target SDK: 33 (Android 13), Minimum SDK: 21 (Android 5.0)
+- Package name format: com.signage.cms or com.company.signage
+- Use Java for primary development (unless specifically requested otherwise)
+- Follow Android Material Design guidelines where applicable
+- Implement proper lifecycle management for Activities and Services
+
+### Digital Signage Specific Requirements
+- ALWAYS implement full-screen kiosk mode functionality
+- ALWAYS include network connectivity monitoring and offline support
+- ALWAYS implement screen wake lock to prevent device sleep
+- ALWAYS disable back button and home button for kiosk mode
+- ALWAYS include crash recovery and auto-restart mechanisms
+- ALWAYS optimize for landscape orientation (primary) with portrait fallback
+
+### WebView Configuration Standards
+- Enable JavaScript and DOM storage for modern web apps
+- Implement proper cache management for offline operation
+- Configure custom User Agent for signage device identification
+- Handle SSL/TLS errors gracefully for self-signed certificates
+- Implement download handling for content updates
+- Optimize performance with hardware acceleration
+
+### Security and Performance
+- Disable debug features in release builds
+- Implement proper error handling without exposing sensitive information
+- Use HTTPS for all CMS communications when possible
+- Implement proper permission handling (INTERNET, WAKE_LOCK, etc.)
+- Optimize memory usage for long-running operation (24/7)
+- Include proper logging with different levels (DEBUG, INFO, ERROR)
+
+### Code Organization and Structure
+- Use clear, descriptive class and method names
+- Include comprehensive JavaDoc comments for all public methods
+- Organize code into logical packages (ui, network, utils, services)
+- Implement singleton patterns for managers (CacheManager, NetworkManager)
+- Use proper exception handling with specific catch blocks
+
+### Integration and Communication
+- Implement REST API communication with proper retry logic
+- Include device registration and heartbeat functionality
+- Support for remote configuration updates
+- Implement proper JSON parsing with error handling
+- Include status reporting back to CMS
+
+## Code Generation Guidelines
+
+### When Creating Activities
+- Always extend AppCompatActivity
+- Implement proper onCreate, onResume, onPause lifecycle methods
+- Include full-screen and immersive mode setup
+- Implement proper WebView configuration
+- Add network connectivity monitoring
+- Include error handling and user feedback
+
+### When Creating Services
+- Use IntentService for background tasks
+- Implement proper notification handling
+- Include proper start/stop mechanisms
+- Add crash recovery logic
+
+### When Creating Utility Classes
+- Make utility methods static where appropriate
+- Include proper parameter validation
+- Implement comprehensive error handling
+- Add detailed logging for debugging
+
+### When Creating Configuration Files
+- Use descriptive names for string resources
+- Include comments explaining configuration purposes
+- Group related configurations together
+- Provide sensible defaults for all settings
+
+## File and Directory Structure
+```
+app/
+├── src/main/
+│   ├── java/com/signage/cms/
+│   │   ├── activities/
+│   │   │   └── MainActivity.java
+│   │   ├── services/
+│   │   │   ├── ContentUpdateService.java
+│   │   │   └── MonitoringService.java
+│   │   ├── managers/
+│   │   │   ├── NetworkManager.java
+│   │   │   ├── CacheManager.java
+│   │   │   └── ConfigManager.java
+│   │   ├── utils/
+│   │   │   ├── WebViewHelper.java
+│   │   │   └── DeviceUtils.java
+│   │   └── models/
+│   │       └── ContentItem.java
+│   ├── res/
+│   │   ├── layout/
+│   │   ├── values/
+│   │   ├── drawable/
+│   │   └── xml/
+│   └── AndroidManifest.xml
+├── build.gradle
+└── proguard-rules.pro
+```
+
+## Common Patterns to Follow
+
+### Error Handling Pattern
+```java
+try {
+    // Primary operation
+} catch (SpecificException e) {
+    Log.e(TAG, "Specific error description: " + e.getMessage());
+    // Specific recovery action
+} catch (Exception e) {
+    Log.e(TAG, "Unexpected error: " + e.getMessage());
+    // General recovery action
+}
+```
+
+### Logging Pattern
+```java
+private static final String TAG = "ClassName";
+Log.d(TAG, "Debug message");
+Log.i(TAG, "Info message");
+Log.w(TAG, "Warning message");
+Log.e(TAG, "Error message");
+```
+
+### Network Request Pattern
+- Always check network connectivity before requests
+- Implement proper timeout handling
+- Include retry logic with exponential backoff
+- Parse responses with proper error handling
+
+## What NOT to Do
+- Never use deprecated Android APIs without migration plan
+- Never hardcode URLs or configuration values in Java code
+- Never implement WebView without proper error handling
+- Never ignore battery optimization considerations
+- Never implement kiosk mode without proper exit mechanism
+- Never use blocking operations on the main UI thread
+- Never ignore memory leaks in long-running applications
+
+## Testing Considerations
+- Always include null checking for WebView operations
+- Test network connectivity scenarios (online/offline)
+- Test long-running operation stability (24+ hours)
+- Verify kiosk mode functionality on target devices
+- Test crash recovery and auto-restart mechanisms
+
+## Documentation Requirements
+- Include clear setup and configuration instructions
+- Document all configuration parameters and their effects
+- Provide troubleshooting guide for common issues
+- Include deployment instructions for various scenarios
+
+Remember: This is a production application that will run 24/7 on dedicated hardware. Prioritize stability, performance, and remote manageability over feature complexity.
+
+# Digital Signage CMS Android Application
+
+A professional Android WebView application designed for digital signage deployments. This app provides a robust kiosk-mode experience for displaying web-based content from a Content Management System (CMS).
+
+## Features
+- Full-screen kiosk mode operation
+- Offline content caching and management
+- Network connectivity monitoring
+- Remote configuration and management
+- Crash recovery and auto-restart
+- Performance optimization for 24/7 operation
+
+## Technical Specifications
+- Target SDK: 33 (Android 13)
+- Minimum SDK: 21 (Android 5.0)
+- Language: Java
+- Architecture: WebView-based with native Android services
+
+## Development Environment
+- Developed using Cursor AI and GitHub Codespaces
+- Build system: Gradle
+- Version control: Git with GitHub
