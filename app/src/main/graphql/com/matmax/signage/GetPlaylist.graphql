@@ -1,0 +1,10 @@
+query GetPlaylist($deviceId: String!) {
+  playlist(deviceId: $deviceId) {
+    id
+    items {
+      type
+      url
+      duration
+    }
+  }
+} 

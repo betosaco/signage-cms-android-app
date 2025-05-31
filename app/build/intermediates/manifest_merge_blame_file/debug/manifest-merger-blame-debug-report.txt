@@ -1,0 +1,211 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.matmax.signage.debug"
+4    android:versionCode="1"
+5    android:versionName="1.0.0-debug" >
+6
+7    <uses-sdk
+7-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:4:5-74
+8        android:minSdkVersion="21"
+8-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:4:15-41
+9        android:targetSdkVersion="34" />
+9-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:4:42-71
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:7:5-79
+12-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:8:5-68
+13-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:8:22-65
+14
+15    <permission
+15-->[androidx.core:core:1.9.0] /Users/albertosaco/.gradle/caches/transforms-3/780e89c5ec44116765764e65ad1fbed3/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+16        android:name="com.matmax.signage.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.9.0] /Users/albertosaco/.gradle/caches/transforms-3/780e89c5ec44116765764e65ad1fbed3/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.9.0] /Users/albertosaco/.gradle/caches/transforms-3/780e89c5ec44116765764e65ad1fbed3/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.matmax.signage.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.9.0] /Users/albertosaco/.gradle/caches/transforms-3/780e89c5ec44116765764e65ad1fbed3/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.9.0] /Users/albertosaco/.gradle/caches/transforms-3/780e89c5ec44116765764e65ad1fbed3/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+20    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+20-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
+20-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:22-62
+21    <uses-feature
+21-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
+22        android:name="android.hardware.camera"
+22-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:26:9-47
+23        android:required="false" />
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:27:9-33
+24    <uses-feature
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+25        android:name="android.hardware.camera.front"
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+26        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+27    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+29        android:name="android.hardware.camera.autofocus"
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+32        android:name="android.hardware.camera.flash"
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+35        android:name="android.hardware.screen.landscape"
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+36        android:required="false" />
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+37    <uses-feature
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+38        android:name="android.hardware.wifi"
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+39        android:required="false" />
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+40
+41    <application
+41-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:10:5-33:19
+42        android:allowBackup="true"
+42-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:11:9-35
+43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+43-->[androidx.core:core:1.9.0] /Users/albertosaco/.gradle/caches/transforms-3/780e89c5ec44116765764e65ad1fbed3/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+44        android:debuggable="true"
+45        android:extractNativeLibs="true"
+46        android:icon="@mipmap/ic_launcher"
+46-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:12:9-43
+47        android:label="@string/app_name"
+47-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:13:9-41
+48        android:roundIcon="@mipmap/ic_launcher_round"
+48-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:14:9-54
+49        android:supportsRtl="true"
+49-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:15:9-35
+50        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
+50-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:16:9-77
+51        <activity
+51-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:18:9-25:20
+52            android:name="com.matmax.signage.SplashActivity"
+52-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:18:19-49
+53            android:exported="true"
+53-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:20:13-36
+54            android:screenOrientation="portrait" >
+54-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:19:13-49
+55            <intent-filter>
+55-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:21:13-24:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:22:17-69
+56-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:22:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:23:17-77
+58-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:23:27-74
+59            </intent-filter>
+60        </activity>
+61        <activity
+61-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:26:9-28:39
+62            android:name="com.matmax.signage.PairingActivity"
+62-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:26:19-50
+63            android:exported="true"
+63-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:28:13-36
+64            android:screenOrientation="portrait" />
+64-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:27:13-49
+65        <activity
+65-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:29:9-31:39
+66            android:name="com.matmax.signage.MainActivity"
+66-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:29:19-47
+67            android:exported="true"
+67-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:31:13-36
+68            android:screenOrientation="portrait" />
+68-->/Users/albertosaco/AndroidApp/app/src/main/AndroidManifest.xml:30:13-49
+69
+70        <provider
+70-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+72            android:authorities="com.matmax.signage.debug.androidx-startup"
+72-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+73            android:exported="false" >
+73-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+74            <meta-data
+74-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+76                android:value="androidx.startup" />
+76-->[androidx.emoji2:emoji2:1.2.0] /Users/albertosaco/.gradle/caches/transforms-3/5f1307a6f0a492a177f2af52ad459bbe/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/albertosaco/.gradle/caches/transforms-3/97a2e0dcb3bd9fc0cc30ec13ae04a431/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/albertosaco/.gradle/caches/transforms-3/97a2e0dcb3bd9fc0cc30ec13ae04a431/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/albertosaco/.gradle/caches/transforms-3/97a2e0dcb3bd9fc0cc30ec13ae04a431/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+82                android:value="androidx.startup" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+83        </provider>
+84
+85        <receiver
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+87            android:directBootAware="false"
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+88            android:enabled="true"
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+89            android:exported="true"
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+90            android:permission="android.permission.DUMP" >
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+93            </intent-filter>
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/albertosaco/.gradle/caches/transforms-3/b15e56e74d16db946b449d23db0e0a54/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+102            </intent-filter>
+103        </receiver>
+104
+105        <activity
+105-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+106            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+106-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+107            android:clearTaskOnLaunch="true"
+107-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+108            android:screenOrientation="sensorLandscape"
+108-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+109            android:stateNotNeeded="true"
+109-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+110            android:theme="@style/zxing_CaptureTheme"
+110-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+111            android:windowSoftInputMode="stateAlwaysHidden" />
+111-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/albertosaco/.gradle/caches/transforms-3/1282ea535b5adb55e631cc2a164e3b3f/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+112    </application>
+113
+114</manifest>

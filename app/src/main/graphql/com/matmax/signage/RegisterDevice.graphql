@@ -1,0 +1,7 @@
+mutation RegisterDevice($pairingCode: String!, $deviceInfo: String) {
+  registerDevice(input: {pairingCode: $pairingCode, deviceInfo: $deviceInfo}) {
+    success
+    deviceId
+    message
+  }
+} 

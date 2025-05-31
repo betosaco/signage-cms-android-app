@@ -1,0 +1,6 @@
+mutation SendHeartbeat($deviceId: String!, $status: String, $timestamp: String) {
+  sendHeartbeat(input: {deviceId: $deviceId, status: $status, timestamp: $timestamp}) {
+    success
+    message
+  }
+} 

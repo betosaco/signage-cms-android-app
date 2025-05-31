@@ -1,0 +1,7 @@
+query IsDevicePaired($pairingCode: String!) {
+  isDevicePaired(pairingCode: $pairingCode) {
+    paired
+    deviceId
+    message
+  }
+} 

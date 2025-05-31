@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/imageViewQrCode"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="QR Code" />
+
+    <TextView
+        android:id="@+id/textViewHelpLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://wa.link/wo8gb9"
+        android:textColor="#009688"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:autoLink="web" />
+
+    <Button
+        android:id="@+id/buttonClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout> 

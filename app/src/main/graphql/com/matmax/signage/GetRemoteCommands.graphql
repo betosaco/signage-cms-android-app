@@ -1,0 +1,8 @@
+query GetRemoteCommands($deviceId: String!) {
+  remoteCommands(deviceId: $deviceId) {
+    id
+    type
+    payload
+    issuedAt
+  }
+} 

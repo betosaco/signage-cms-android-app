@@ -1,0 +1,67 @@
+type Query {
+  playlist(deviceId: String!): Playlist
+  remoteCommands(deviceId: String!): [RemoteCommand!]!
+  isDevicePaired(pairingCode: String!): DevicePairingStatus!
+}
+
+type Mutation {
+  registerDevice(input: RegisterDeviceInput!): DeviceRegistrationResult!
+  sendHeartbeat(input: HeartbeatInput!): HeartbeatResult!
+  updateDeviceConfig(input: DeviceConfigInput!): DeviceConfigResult!
+}
+
+type Playlist {
+  id: ID!
+  items: [PlaylistItem!]!
+}
+
+type PlaylistItem {
+  type: String!
+  url: String!
+  duration: Int
+}
+
+type RemoteCommand {
+  id: ID!
+  type: String!
+  payload: String
+  issuedAt: String
+}
+
+type DeviceConfigResult {
+  success: Boolean!
+  message: String
+}
+
+input DeviceConfigInput {
+  deviceId: String!
+  configJson: String!
+}
+
+type DeviceRegistrationResult {
+  success: Boolean!
+  deviceId: String
+  message: String
+}
+
+input RegisterDeviceInput {
+  pairingCode: String!
+  deviceInfo: String
+}
+
+type HeartbeatResult {
+  success: Boolean!
+  message: String
+}
+
+input HeartbeatInput {
+  deviceId: String!
+  status: String
+  timestamp: String
+}
+
+type DevicePairingStatus {
+  paired: Boolean!
+  deviceId: String
+  message: String
+} 

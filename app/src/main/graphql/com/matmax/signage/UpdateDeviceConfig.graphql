@@ -1,0 +1,6 @@
+mutation UpdateDeviceConfig($deviceId: String!, $configJson: String!) {
+  updateDeviceConfig(input: {deviceId: $deviceId, configJson: $configJson}) {
+    success
+    message
+  }
+} 

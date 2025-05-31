@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#009688</color> <!-- Nature Green -->
+    <color name="primaryDarkColor">#00796B</color>
+    <color name="secondaryColor">#FF9800</color> <!-- Orange -->
+    <color name="accentColor">#FFC107</color> <!-- Amber -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources> 

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/albertosaco/.gradle/daemon/8.4/com.matmax.signage.app-mergeDebugResources-38:/layout/qr_help_dialog.xml",
+        "source": "/Users/albertosaco/.gradle/daemon/8.4/com.matmax.signage.app-main-41:/layout/qr_help_dialog.xml"
+    },
+    {
+        "merged": "com.matmax.signage.app-mergeDebugResources-38:/layout/activity_pairing.xml",
+        "source": "com.matmax.signage.app-main-41:/layout/activity_pairing.xml"
+    },
+    {
+        "merged": "/Users/albertosaco/.gradle/daemon/8.4/com.matmax.signage.app-mergeDebugResources-38:/layout/activity_splash.xml",
+        "source": "/Users/albertosaco/.gradle/daemon/8.4/com.matmax.signage.app-main-41:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/albertosaco/.gradle/daemon/8.4/com.matmax.signage.app-mergeDebugResources-38:/layout/activity_pairing.xml",
+        "source": "/Users/albertosaco/.gradle/daemon/8.4/com.matmax.signage.app-main-41:/layout/activity_pairing.xml"
+    }
+]
