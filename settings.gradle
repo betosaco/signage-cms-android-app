@@ -1,0 +1,5 @@
+// settings.gradle for Digital Signage CMS Android Application
+// Includes the main app module
+
+rootProject.name = 'signage-cms-android-app'
+include ':app'

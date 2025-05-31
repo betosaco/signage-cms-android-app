@@ -1,0 +1,34 @@
+// Top-level build file for Digital Signage CMS Android Application
+// This file configures buildscript repositories, plugins, and global dependencies.
+
+buildscript {
+    ext {
+        kotlin_version = '1.9.22'
+        agp_version = '8.1.0'
+        okhttp_version = '4.11.0'
+        retrofit_version = '2.9.0'
+        gson_version = '2.10.1'
+    }
+    repositories {
+        google() // Google's Maven repository for Android dependencies
+        mavenCentral() // Central repository for Java libraries
+        maven { url 'https://jitpack.io' } // JitPack for GitHub-hosted libraries
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version" // Android Gradle Plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Kotlin support
+        // NOTE: Do not place your application dependencies here; they belong in the app-level build.gradle
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
