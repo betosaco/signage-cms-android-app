@@ -1,0 +1,96 @@
+# Cursor Rules for Digital Signage Android WebView App
+
+## Project Context
+You are developing an Android WebView application specifically for digital signage and CMS (Content Management System) integration. This app will run on dedicated Android tablets or signage devices in kiosk mode, displaying web-based content from a remote CMS.
+
+## Core Requirements and Constraints
+
+### Android Development Standards
+- Target SDK: 33 (Android 13), Minimum SDK: 21 (Android 5.0)
+- Package name format: com.signage.cms or com.company.signage
+- Use Java for primary development (unless specifically requested otherwise)
+- Follow Android Material Design guidelines where applicable
+- Implement proper lifecycle management for Activities and Services
+
+### Digital Signage Specific Requirements
+- ALWAYS implement full-screen kiosk mode functionality
+- ALWAYS include network connectivity monitoring and offline support
+- ALWAYS implement screen wake lock to prevent device sleep
+- ALWAYS disable back button and home button for kiosk mode
+- ALWAYS include crash recovery and auto-restart mechanisms
+- ALWAYS optimize for landscape orientation (primary) with portrait fallback
+
+### WebView Configuration Standards
+- Enable JavaScript and DOM storage for modern web apps
+- Implement proper cache management for offline operation
+- Configure custom User Agent for signage device identification
+- Handle SSL/TLS errors gracefully for self-signed certificates
+- Implement download handling for content updates
+- Optimize performance with hardware acceleration
+
+### Security and Performance
+- Disable debug features in release builds
+- Implement proper error handling without exposing sensitive information
+- Use HTTPS for all CMS communications when possible
+- Implement proper permission handling (INTERNET, WAKE_LOCK, etc.)
+- Optimize memory usage for long-running operation (24/7)
+- Include proper logging with different levels (DEBUG, INFO, ERROR)
+
+### Code Organization and Structure
+- Use clear, descriptive class and method names
+- Include comprehensive JavaDoc comments for all public methods
+- Organize code into logical packages (ui, network, utils, services)
+- Implement singleton patterns for managers (CacheManager, NetworkManager)
+- Use proper exception handling with specific catch blocks
+
+### Integration and Communication
+- Implement REST API communication with proper retry logic
+- Include device registration and heartbeat functionality
+- Support for remote configuration updates
+- Implement proper JSON parsing with error handling
+- Include status reporting back to CMS
+
+## Code Generation Guidelines
+
+### When Creating Activities
+- Always extend AppCompatActivity
+- Implement proper onCreate, onResume, onPause lifecycle methods
+- Include full-screen and immersive mode setup
+- Implement proper WebView configuration
+- Add network connectivity monitoring
+- Include error handling and user feedback
+
+### When Creating Services
+- Use IntentService for background tasks
+- Implement proper notification handling
+- Include proper start/stop mechanisms
+- Add crash recovery logic
+
+### When Creating Utility Classes
+- Make utility methods static where appropriate
+- Include proper parameter validation
+- Implement comprehensive error handling
+- Add detailed logging for debugging
+
+### When Creating Configuration Files
+- Use descriptive names for string resources
+- Include comments explaining configuration purposes
+- Group related configurations together
+- Provide sensible defaults for all settings
+
+## File and Directory Structure
+(app structure as previously described...)
+
+## Common Patterns to Follow
+(error handling, logging, network request patterns...)
+
+## What NOT to Do
+(never use deprecated APIs, never hardcode URLs, etc...)
+
+## Testing Considerations
+(null checking, network scenarios, long-running stability...)
+
+## Documentation Requirements
+(setup instructions, config docs, troubleshooting...)
+
+Remember: This is a production application that will run 24/7 on dedicated hardware. Prioritize stability, performance, and remote manageability over feature complexity. 
